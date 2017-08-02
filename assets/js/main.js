@@ -18,10 +18,11 @@ searchBox.addListener('places_changed', function() {
 $.ajax({
 	url: 'https://api.darksky.net/forecast/1b0d69d33a5c8c064c8d249d677e7f7e/37.8267,-122.4233',
 	type: 'GET',
-	dataType: 'json',
+	dataType: 'jsonp',
 })
 .done(function(x) {
 	console.log(x);
+
 })
 .fail(function() {
 	console.log("error");
@@ -68,12 +69,12 @@ function pantalla(){
 		data: {
 			method:"flickr.photos.search"
 			api_key: 'ab4d274c1f5f60125d3d9a36998283ce',
-			format:'jpg',
+			format:'json',
 		}
 	})
 	.done(function(x){
 		console.log(x);
-		$('fondo').append(x)
+		$('fondo').append(x);
 	})
 	.fail(function(){
 		console.log("error");
