@@ -11,17 +11,8 @@ searchBox.addListener('places_changed', function() {
 		$.getJSON('https://api.darksky.net/forecast/1b0d69d33a5c8c064c8d249d677e7f7e/37.8267,-122.4233', function(forecast){
 			console.log(forecast);
 		});
-
 	});
-
 });
-
-
-
-
-
-
-
 
 /*
 $.ajax({
@@ -30,7 +21,7 @@ $.ajax({
 	dataType: 'json',
 })
 .done(function(x) {
-	console.log(x.actualmente);
+	console.log(x);
 })
 .fail(function() {
 	console.log("error");
